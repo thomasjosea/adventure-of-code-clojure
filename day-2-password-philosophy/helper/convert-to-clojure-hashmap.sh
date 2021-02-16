@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mapentry() { echo "{ :value '${password}' :letter '${letter} :min-occurrences ${min_occurrences} :max-occurrences ${max_occurrences} }"; }
+mapentry() { echo "{ :value \"${password}\" :letter \"${letter}\" :min-occurrences ${min_occurrences} :max-occurrences ${max_occurrences} }"; }
 inputfile=../src/input.txt
 outputfile=../src/input.clj
 
@@ -15,5 +15,5 @@ while read p; do
 done < $inputfile
 
 touch $outputfile
-echo "(ns input.clj)" >> $outputfile
+echo "(ns input)" >> $outputfile
 echo "(def input [${allmapentries}])" >> $outputfile
