@@ -16,3 +16,5 @@ How many passwords are valid according to their policies?
 
 To help solving this problem I ended up parsing the input text file into a clj variable using [this helper bash script](./helper/convert-to-clojure-hashmap.sh).
 It outputs a file that I can use in my solution and have all entries properly formatted in a hashmap.
+
+The proposed solution consists of creating a map where each key is a letter and the value is how many times this letter appears in the password, using the reduce method. Once that has been computed, it's a matter of checking whether the target letter is within the desired range.
